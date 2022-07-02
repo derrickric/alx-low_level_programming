@@ -1,16 +1,24 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
- * main - Entry point
- * Return: Always 0
+ *main - Task 3 prints the alphabet in lowercase, and then in uppercase
+ *followed by a new line
+ *Return: 0
  */
 int main(void)
 {
-char letter; 
 
-for (letter = 'a'; letter <= 'z'; letter++)
-putchar(letter);
-for (letter = 'A'; letter <= 'Z'; letter++)
-putchar(letter);
-putchar('\n');
+int ch;
+
+for (ch = 97; ch <= 122; ch++)
+{
+putchar(ch);
+}
+for (ch = 65; ch <= 90; ch++)
+{
+putchar(ch);
+}
+putchar(10); /* this is the ASCII code for new line*/
 return (0);
 }
