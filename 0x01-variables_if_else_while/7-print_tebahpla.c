@@ -6,13 +6,12 @@
  */
 int main(void)
 {
-	int num;
-        char letter;
+	int ch;
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-	for (letter = 'a'; letter <= 'f'; letter++)
-		putchar(letter);
-	putchar('\n');
+	for (ch = 48; ch <= 57; ch++)
+		(
+		 putchar(ch);
+		)
+		putchar(10); /*code for new line*/
 	return (0);
 }
