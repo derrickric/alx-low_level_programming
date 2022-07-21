@@ -9,6 +9,7 @@
  * Return: boolean
  */
 int is_sqrt(float a, float b)
+
 {
 	return ((a * a) == b);
 }
@@ -30,4 +31,5 @@ float find_sqrt(float a, float b)
 		return (f);
 	}
 	return (find_sqrt(a, f));
+
 }
