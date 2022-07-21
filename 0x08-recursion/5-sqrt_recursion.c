@@ -1,35 +1,44 @@
 #include "main.h"
-
-
 /**
- * is_sqrt - check if it is a sqrt
- * @a: root
- * @b: square
- *
- * Return: boolean
+ * _evaluate - evaluate function sqrt
+ * @i: interger
+ * @n: interger
+ * Return: evaluate sqrt
  */
-int is_sqrt(float a, float b)
 
+int _evaluate(int i, int n)
 {
-	return ((a * a) == b);
+	/*Evaluate function*/
+	if (n == 0 || n == 1)
+		return (n);
+
+	else if (i * i < n)
+		return (_evaluate(i + 1, n));
+
+	else if (i * i == n) /*Condiction base*/
+		return (i);
+
+	return (-1);
+
+	return (-1);
 }
 
-
 /**
- * @a: number
- * @b: guess
- *
- * Return: sqrt
+ * _sqrt_recursion - evaluate sqrt
+ * @n: interger
+ * Return: Sgrt_recursion
  */
-float find_sqrt(float a, float b)
-{
-	float f;
 
-	f = (b + (a / b)) / 2;
-	if (is_sqrt(f, a))
+int _sqrt_recursion(int n)
+{
+	int i = 0;
+
+	if (i < 0) /*If n is negative*/
+		return (-1);
+
+	else
 	{
-		return (f);
+		return (_evaluate(i, n)); /*Recursive call*/
 	}
-	return (find_sqrt(a, f));
 
 }
